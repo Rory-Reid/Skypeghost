@@ -103,6 +103,7 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="DALs\ClipboardAccessor.cs" />
+    <Compile Include="DALs\SkypeghostExperimentalCode.cs" />
     <Compile Include="DALs\IClipboardAccessor.cs" />
     <Compile Include="Models\ISkypeghostModel.cs" />
     <Compile Include="Models\SkypeghostModel.cs" />

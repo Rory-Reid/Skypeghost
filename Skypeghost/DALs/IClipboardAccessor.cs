@@ -1,7 +1,11 @@
 ﻿namespace Skypeghost.DALs
 {
+    using System.Windows;
+
     public interface IClipboardAccessor
     {
-        void GetClipboardData();
+        IDataObject GetClipboardData();
+
+        void SetClipboardData(IDataObject data);
     }
 }
