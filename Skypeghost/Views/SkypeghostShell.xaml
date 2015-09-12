@@ -3,6 +3,49 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="Skype ghost" Height="350" Width="525">
     <Grid>
-      <Button Content="Paste" Command="{Binding PasteClipboardData}"/>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <!-- Skype quote attributes entry section -->
+        <Grid Grid.Row="0">
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            
+            <GroupBox Header="User Name"
+                      Grid.Column="0">
+                <TextBox Text="{Binding UserName}" />
+            </GroupBox>
+            
+            <GroupBox Header="Display Name"
+                      Grid.Column="1">
+                <TextBox Text="{Binding DisplayName}"/>
+            </GroupBox>
+            
+            <GroupBox Header="Conversation Name"
+                      Grid.Column="2">
+                <TextBox Text="{Binding ConversationName}"/>
+            </GroupBox>
+
+        </Grid>
+
+        <!-- Quote text entry section -->
+        <Grid Grid.Row="1">
+            <GroupBox Header="Quote Text">
+                <TextBox Text="{Binding QuoteText}"/>
+            </GroupBox>
+        </Grid>
+
+        <!-- Controls -->
+        <Grid Grid.Row="2">
+            <Button Content="Copy To Clipboard"
+                    Command="{Binding CopyToClipboard}"/>
+        </Grid>
     </Grid>
 </Window>
